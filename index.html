@@ -23,11 +23,19 @@
     
     <div id="app" class="container my-5">
         <h1>{{title}}</h1>
-        <ul>
+        <ul v-if="emailList.length === 10">
             <li v-for="item of emailList">
                 {{item}}
             </li>
         </ul>
+        <div 
+        v-else
+        class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
 
     <script src="assets/js/script.js"></script>
